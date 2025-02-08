@@ -6,7 +6,7 @@
  
     async function initializeApp() {
       try {
-        const MMSDK = new MetaMaskSDK({})
+        const MMSDK = new MetaMaskSDK()
         const accounts = await MMSDK.connect()
         const provider = MMSDK.getProvider()
         console.log(accounts)
