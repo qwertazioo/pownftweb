@@ -9,6 +9,7 @@
         const MMSDK = new MetaMaskSDK({})
         const accounts = await MMSDK.connect()
         const provider = MMSDK.getProvider()
+        console.log(accounts)
     
   } catch (error) {
         console.error('Error initializing:', error);
