@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js">
+  <script type="module"> 
+    import metamasksdk from 'https://cdn.jsdelivr.net/npm/@metamask/sdk@0.32.0/+esm' 
  
     async function initializeApp() {
       try {
-        const provider = await detectEthereumProvider();
-        
+        const ethereum = new MetaMaskSDK({})
+        ethereum.request({method: 'eth_requestAccounts', params: []})
         if (provider) {
           console.log('MetaMask is available!');
           // handle provider
