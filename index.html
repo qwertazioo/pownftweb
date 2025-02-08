@@ -7,7 +7,7 @@
     async function initializeApp() {
       try {
         const MMSDK = new MetaMaskSDK({})
-        
+        const accounts = await MMSDK.connect()
     
     
   
