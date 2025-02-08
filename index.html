@@ -6,8 +6,11 @@
  
     async function initializeApp() {
       try {
-        const ethereum = new MetaMaskSDK({})
-        ethereum.request({method: 'eth_requestAccounts', params: []})
+        const MMSDK = new MetaMaskSDK({})
+        const accounts = await MMSDK.connect()
+
+// Get provider for RPC requests
+    const provider = MMSDK.getProvider()
         if (provider) {
           console.log('MetaMask is available!');
           // handle provider
